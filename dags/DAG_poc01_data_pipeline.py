@@ -79,4 +79,4 @@ with models.DAG(
 
     t_end = DummyOperator(task_id="end")
 
-   t_begin >> create_cluster >> submit_job >> [delete_cluster,gsc_to_gbq] >> t_end
+    t_begin >> create_cluster >> submit_job >> [delete_cluster,gsc_to_gbq] >> t_end
