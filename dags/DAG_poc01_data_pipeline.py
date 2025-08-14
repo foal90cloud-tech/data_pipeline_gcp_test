@@ -41,7 +41,7 @@ default_args = {
     'owner': 'Fer Flores',                   # The owner of the task.
     'depends_on_past': False,         # Task instance should not rely on the previous task's schedule to succeed.
     'start_date': datetime.datetime(2025, 8, 5),
-    'retries': 2,  # Retry once before failing the task.
+    'retries': 1,  # Retry once before failing the task.
     'retry_delay': datetime.timedelta(minutes=1),  # Time between retries
 }
 
