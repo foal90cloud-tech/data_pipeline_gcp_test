@@ -12,7 +12,7 @@ from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQue
 
 CLUSTER_NAME = 'dataproc-airflow-cluster'
 REGION='us-central1' # region
-PROJECT_ID='gaffable-operand-468818-f9' #project name
+PROJECT_ID='affable-operand-468818-f9' #project name
 PYSPARK_URI='gs://us-central1-composer-airflo-f3b665a4-bucket/codes' # spark job location in cloud storage
 
 
@@ -66,7 +66,7 @@ with models.DAG(
         task_id="transfer_data_to_bigquery",
         bucket="download_test_data",
         source_objects =["output_files/*.snappy.parquet"],
-        destination_project_dataset_table ="bigquery_table", # bigquery table
+        destination_project_dataset_table ="affable-operand-468818-f9.airflow_test.test_data_pyspkx", # bigquery table
         source_format = "PARQUET"
     )
 
