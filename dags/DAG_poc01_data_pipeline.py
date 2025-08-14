@@ -15,7 +15,7 @@ from airflow.providers.google.cloud.transfers.gcs_to_bigquery import GCSToBigQue
 CLUSTER_NAME = 'dataproc-airflow-cluster'
 REGION='us-central1' # region
 PROJECT_ID='affable-operand-468818-f9' #project name
-PYSPARK_URI='gs://us-central1-composer-airflo-f3b665a4-bucket/codes' # spark job location in cloud storage
+PYSPARK_URI='gs://us-central1-composer-airflo-f3b665a4-bucket/codes/main_pyspark_job.py' # spark job location in cloud storage
 
 
 CLUSTER_CONFIG = {
