@@ -37,8 +37,17 @@ PYSPARK_JOB = {
     "pyspark_job": {"main_python_file_uri": PYSPARK_URI},
 }
 
+default_args = {
+    'owner': 'Fer Flores',                   # The owner of the task.
+    'depends_on_past': False,         # Task instance should not rely on the previous task's schedule to succeed.
+    'start_date': datetime.datetime(2025, 8, 5),
+    'retries': 2,  # Retry once before failing the task.
+    'retry_delay': datetime.timedelta(minutes=1),  # Time between retries
+}
+
 with models.DAG(
     "DAG-poc01-data-pipeline",
+    default_args = default_args,
     schedule_interval=None,  
     start_date=days_ago(1),
     catchup=False,
