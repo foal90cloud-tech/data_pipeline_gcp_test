@@ -77,7 +77,7 @@ with models.DAG(
         task_id="transfer_data_to_bigquery",
         bucket="us-central1-composer-airflo-f3b665a4-bucket",
         source_objects =["output_files/*.snappy.parquet"],
-        destination_project_dataset_table ="affable-operand-468818-f9.airflow_test.test_data_pyspkx", # bigquery table
+        destination_project_dataset_table ="affable-operand-468818-f9.airflow_test.test_data_pyspk", # bigquery table
         source_format = "PARQUET"
     )
 
